@@ -64,6 +64,7 @@ private:
     };
     int start1 = -1;//乘车人起点
     int end1 = -1;//乘车人终点
+    int hobby = -1; //乘车人偏好
     int start2 = -1;//拼车人起点
     int end2 = -1;//拼车人终点
     int path[14][14]; //path[i][j]记录i到j路径上，顶点j的前驱。

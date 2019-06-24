@@ -46,7 +46,12 @@ void MapForm::paintEvent(QPaintEvent *)
         if(citys[i].color == "black")
             pen.setColor(Qt::black);
         else
-            pen.setColor(Qt::black);
+        {
+            if(citys[i].color == "red")
+                pen.setColor(Qt::red);
+            else if(citys[i].color == "yellow")
+                pen.setColor(Qt::yellow);
+        }
         pen.setWidth(8);
         painter.setPen(pen);
         painter.drawPoint(citys[i].addr);
@@ -77,7 +82,10 @@ void MapForm::paintEvent(QPaintEvent *)
         }
         else
         {
-            pen1.setColor(Qt::red);
+            if(roads[i].color == "red")
+                pen1.setColor(Qt::red);
+            else if(roads[i].color == "yellow")
+                pen1.setColor(Qt::yellow);
             pen1.setWidth(5);
         }
         painter1.setPen(pen1);
