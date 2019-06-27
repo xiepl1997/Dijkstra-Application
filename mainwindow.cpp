@@ -186,7 +186,7 @@ void MainWindow::on_pushButton_clicked()
         }
         if(isInRouting == 0)
         {
-            QMessageBox::about(NULL, "提示", "拼车人无法和乘车人拼车!");
+            QMessageBox::about(NULL, "提示", "拼车人路线不在乘车人路线上，无法拼车!");
         }
     }
 

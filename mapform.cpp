@@ -91,5 +91,12 @@ void MapForm::paintEvent(QPaintEvent *)
         painter1.setPen(pen1);
         painter1.drawLine(roads[i].city1.addr, roads[i].city2.addr);
     }
+
+    //绘制拥堵标记，蓝色小点标记
+    QPainter painter3(this);
+    QPen pen2(Qt::red);
+    pen2.setWidth(7);
+    painter3.setPen(pen2);
+    painter3.drawPoints(jamroads, 3);
 }
 

@@ -25,6 +25,13 @@ const QPointF points[14]={
     QPointF(200,345)
 };
 
+//定义路况：两条路为堵，6-8、3-4、4-7
+const QPointF jamroads[3]={
+    QPointF(155, 210),
+    QPointF(150, 120),
+    QPointF(275, 145)
+};
+
 //邻接矩阵
 //double matrix[12][12];
 
@@ -58,24 +65,24 @@ public:
         City(14,points[13])
     };
     Road roads[18]={
-        Road(citys[0],citys[2]),
-        Road(citys[0],citys[4]),
-        Road(citys[1],citys[2]),
-        Road(citys[2],citys[3]),
-        Road(citys[2],citys[7]),
-        Road(citys[4],citys[7]),
-        Road(citys[1],citys[3]),
-        Road(citys[3],citys[5]),
-        Road(citys[3],citys[6]),
-        Road(citys[5],citys[7]),
-        Road(citys[6],citys[9]),
-        Road(citys[5],citys[9]),
-        Road(citys[7],citys[8]),
-        Road(citys[7],citys[11]),
-        Road(citys[7],citys[10]),
-        Road(citys[8],citys[11]),
-        Road(citys[6],citys[12]),
-        Road(citys[10],citys[13])
+        Road(citys[0],citys[2],0),
+        Road(citys[0],citys[4],0),
+        Road(citys[1],citys[2],0),
+        Road(citys[2],citys[3],1),
+        Road(citys[2],citys[7],0),
+        Road(citys[4],citys[7],0),
+        Road(citys[1],citys[3],0),
+        Road(citys[3],citys[5],0),
+        Road(citys[3],citys[6],1),
+        Road(citys[5],citys[7],1),
+        Road(citys[6],citys[9],0),
+        Road(citys[5],citys[9],0),
+        Road(citys[7],citys[8],0),
+        Road(citys[7],citys[11],0),
+        Road(citys[7],citys[10],0),
+        Road(citys[8],citys[11],0),
+        Road(citys[6],citys[12],0),
+        Road(citys[10],citys[13],0)
     };
     double matrix[14][14];
 
